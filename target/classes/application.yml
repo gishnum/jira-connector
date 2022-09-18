@@ -1,0 +1,18 @@
+server:
+  port: 8084
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    appname: jira-connector
+
+http:
+  timeout: 20000
+
+jira:
+  create:
+    endpoint: https://thegreatsolvers.atlassian.net/rest/api/3/issue
